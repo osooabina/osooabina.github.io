@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400|Playfair+Display|Roboto+Mono:100,300,400|Signika+Negative:300');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    background-color: rgb(8, 7, 13);
+    overflow-x: hidden;
+}
+
+.header-left {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.header-left ul {
+    text-align: center;
+}
+
+.header-left li {
+    display: inline-block;
+    font-size: 1.2em;
+    word-spacing: 92px;
+    letter-spacing: 2px;
+    padding-right: 15px;
+    color: wheat;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover,
+a:focus {
+    color: red;
+    transition: 1s;
+}
+
+.headerLeft a {
+    color: #bcbcbc;
+    text-decoration: none;
+}
+
+.headerLeft a:hover,
+.headerLeft a:focus {
+    color: #fff;
+}
+
+
+.headerRight {
+    display: inline-block;
+    margin-top: 5%;
+}
+
+.headerRight ul {
+    display: contents;
+}
+
+.headerRight li {
+    padding-left: .4em;
+    padding-top: .4em;
+    padding-right: .4em;
+    display: inline-block;
+}
+
+.headerRight img {
+    width: 1.4rem;
+    display: block;
+    padding-bottom: .8em;
+    opacity: 0.75;
+}
+
+.headerRight a {
+    text-decoration: none;
+}
+
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-image: url("../video/poster.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*  position: relative;*/
+}
+
+.profilePhoto {
+    display: inline;
+    text-align: center;
+    /*    float: left;*/
+    margin-top: 10px;
+}
+
+.profphoto {
+    margin-top: 30px;
+    max-height: 10rem;
+    border: .3rem solid rgb(255, 255, 255);
+    border-radius: 50%;
+    align-self: center;
+}
+
+.nameTitle {
+
+    color: aliceblue;
+    margin-top: 3.5rem;
+}
+
+.name {
+    font-size: 5rem;
+    letter-spacing: 5px;
+    transition: 2s;
+}
+
+.subheading {
+    font-style: italic;
+}
+
+h1 span {
+    color: aqua;
+}
+
+
+.exph1 h1 {
+    float: right;
+    text-align: right
+}
+
+.exph1 {
+    text-align: right;
+    margin-bottom: 20px;
+    border-bottom: 1px solid orange;
+    font-size: 1.5rem;
+    font-style: italic;
+    width: auto;
+    float: right;
+    display: inline-block;
+    color: blanchedalmond;
+    margin-right: 20px;
+}
+
+.row {
+    display: flex;
+    background-color: rgba(12, 6, 49, 0.26);
+    padding: 20px;
+}
+
+.company {
+    margin-right: 20px;
+    /*    margin-top: 20px;*/
+    text-align: center;
+    width: 20%;
+    border-right: 2px solid red;
+}
+
+.comp {
+    color: aqua;
+    font-size: .7rem;
+    display: block;
+    padding-top: 10px;
+    font-style: italic;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.details {
+    text-align: center;
+    width: 80%;
+    letter-spacing: .3px;
+    word-spacing: 1px;
+}
+
+.lineT {
+    margin: 20px 100px;
+}
+
+.skills {
+    display: inline-block;
+    color: white;
+    margin: 0 15vw;
+    position: relative;
+    margin-top: 30px;
+    width: 70vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.skillTitle {
+    text-align: left;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #b27b00;
+    font-weight: bold;
+}
+
+.skillDesc {
+    padding: 10px;
+    background-color: #131512;
+    text-align: center;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.experience {
+    display: inline-block;
+    color: white;
+    margin: 0 10vw;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 80vw;
+     height: 100vh;
+    /*    text-align: right;*/
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .header-left {
+        display: inline;
+        text-align: left;
+        padding: 2px;
+    }
+
+    .name {
+        font-size: 2rem;
+        letter-spacing: 5px;
+        transition: 2s;
+    }
+
+    .exph1 h1 {
+        float: right;
+        text-align: right
+    }
+
+    .exph1 {
+        text-align: right;
+        margin-bottom: 10px;
+        border-bottom: 1px solid orange;
+        font-size: 1rem;
+        font-style: italic;
+        width: auto;
+        float: right;
+        display: inline-block;
+        color: blanchedalmond;
+        margin-right: 20px;
+    }
+
+    .row {
+        display: block;
+        background-color: rgba(12, 6, 49, 0.26);
+        padding: 10px;
+    }
+
+    .company {
+        margin-right: 20px;
+        width: 100%
+    }
+
+    .comp {
+        color: aqua;
+        font-size: .7rem;
+        display: block;
+        padding-top: 10px;
+        font-style: italic;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+    }
+
+    .details {
+        text-align: center;
+        width: 100%;
+        padding-top: 20px;
+        letter-spacing: .3px;
+        word-spacing: 1px;
+    }
+
+    .lineT {
+        margin: 20px 100px;
+    }
+
+    .skills {
+        display: inline-block;
+        color: white;
+        margin: 0 5%;
+        position: relative;
+        margin-top: 30px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .skillTitle {
+        text-align: left;
+        padding: 10px;
+        font-size: 1rem;
+        color: #b27b00;
+        font-weight: bold;
+    }
+
+    .skillDesc {
+        padding: 5px;
+        background-color: #131512;
+        text-align: center;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+        font-size: .9rem
+    }
+
+    .experience {
+        display: inline-block;
+        color: white;
+        margin: 0 10vw;
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 80vw;
+        /*    text-align: right;*/
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+    .row {
+        display: block;
+        background-color: rgba(12, 6, 49, 0.26);
+        padding: 10px;
+    }
+
+    .company {
+        margin-right: 20px;
+        width: 100%
+    }
+
+    .comp {
+        color: aqua;
+        font-size: .7rem;
+        display: block;
+        padding-top: 10px;
+        font-style: italic;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+    }
+
+    .details {
+        text-align: center;
+        width: 100%;
+        padding-top: 20px;
+        letter-spacing: .3px;
+        word-spacing: 1px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .example {
+        background: blue;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .example {
+        background: orange;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .example {
+        background: pink;
+    }
+}
