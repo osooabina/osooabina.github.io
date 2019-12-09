@@ -1,14 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:300,400|Playfair+Display|Roboto+Mono:100,300,400|Signika+Negative:300');
+/*@import url('https://fonts.googleapis.com/css?family=Oswald:300,400|Playfair+Display|Roboto+Mono:100,300,400|Signika+Negative:300');*/
 
 * {
     margin: 0;
     box-sizing: border-box;
+    /*         background-color: var(--bg-color);*/
+    color: var(--font-color);
+    font-family: var(--font-family);
+}
+
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --font-family: Muli, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
 }
 
 body {
+    font-family: Muli, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     padding: 0;
     background-color: rgb(8, 7, 13);
     overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 .header-left {
@@ -16,6 +39,7 @@ body {
     text-align: center;
     padding: 20px;
     width: 100%;
+
 }
 
 .header-left ul {
@@ -36,8 +60,7 @@ a {
     color: aliceblue;
 }
 
-a:hover,
-a:focus {
+a:hover {
     color: red;
     transition: 1s;
 }
@@ -85,12 +108,11 @@ a:focus {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    background-image: url("../video/poster.png");
+    background-image: url("../img/desk.png");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    /*  position: relative;*/
 }
 
 .profilePhoto {
@@ -130,21 +152,22 @@ h1 span {
 
 
 .exph1 h1 {
-    float: right;
-    text-align: right
+    /*    float: right;*/
+    text-align: center
 }
 
 .exph1 {
-    text-align: right;
-    margin-bottom: 20px;
-    border-bottom: 1px solid orange;
+    text-align: center;
+    margin: 20px 0;
+    /*    border-bottom: 1px solid orange;*/
     font-size: 1.5rem;
     font-style: italic;
-    width: auto;
-    float: right;
-    display: inline-block;
+    /*    width: auto;*/
+    /*    float: right;*/
+    /*    display: inline-block;*/
+    /*    display: inline;*/
     color: blanchedalmond;
-    margin-right: 20px;
+    /*    margin-right: 20px;*/
 }
 
 .row {
@@ -189,7 +212,7 @@ h1 span {
     position: relative;
     margin-top: 30px;
     width: 70vw;
-    height: 100vh;
+    /*    height: 100vh;*/
     text-align: center;
 }
 
@@ -209,6 +232,56 @@ h1 span {
     letter-spacing: 1px;
 }
 
+.education {
+    /*    display: flex;*/
+    display: inline-block;
+    color: white;
+    margin: 0 15vw;
+    position: relative;
+    margin-top: 30px;
+    width: 70vw;
+    /*    height: 100vh;*/
+}
+
+.column {
+    padding: 10px 0;
+
+}
+
+.course {
+    /*            display: block;*/
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: #a8009b
+}
+
+.school {
+    padding: 5px 0;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+.date {
+    color: aquamarine;
+    font-style: oblique;
+}
+
+.date span {
+    margin-left: 20%;
+    color: aqua;
+    font-style: italic;
+}
+
+.loc {
+    width: 8px;
+    /*            display: inline-block;*/
+    margin-right: 10px;
+}
+
+.hat {
+    width: 90px;
+}
+
 .experience {
     display: inline-block;
     color: white;
@@ -217,12 +290,27 @@ h1 span {
     margin-top: 30px;
     margin-bottom: 30px;
     width: 80vw;
-     height: 100vh;
+    /*    height: 100vh;*/
     /*    text-align: right;*/
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    * {
+        /*         background-color: var(--bg-color);*/
+        color: var(--font-color);
+    }
+
+    .main {
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        background-image: url("../img/phone.png");
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     .header-left {
         display: inline;
@@ -323,6 +411,22 @@ h1 span {
         margin-bottom: 30px;
         width: 80vw;
         /*    text-align: right;*/
+    }
+
+    .education {
+        /*    display: flex;*/
+        display: inline-block;
+        color: white;
+        margin: 0 5vw;
+        position: relative;
+        margin-top: 30px;
+        width: 90vw;
+        height: 100vh;
+        /*    text-align: center;*/
+    }
+
+    .course {
+        font-size: 1.3rem;
     }
 
 }

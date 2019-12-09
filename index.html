@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <head>
@@ -7,8 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My Portfolio - Gordon Osoo</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="css/dark.css" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="img/img.png" type="image/x-icon">
         <link rel="icon" href="mg/img.png" type="image/x-icon">
+        
     </head>
 </head>
 
@@ -37,14 +40,15 @@
         <div class="header-left">
             <nav>
                 <ul>
-                    <li><a href="">Experience</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="">Education</a></li>
+                    <li><a href="#education">Education</a></li>
+                    
                 </ul>
             </nav>
         </div>
         <div class="profilePhoto">
-            <img src="img/img.png" alt="" class="profphoto">
+            <img src="img/profile/abina.jpg" alt="" class="profphoto">
         </div>
         <div class="nameTitle">
             <div class="titles">
@@ -57,29 +61,31 @@
             <nav>
                 <ul>
                     <li>
-                        <a target="_blank" href="https://github.com/dimebt">
+                        <a target="_blank" href="https://github.com/osooabina">
                             <img border="0" alt="" src="img/social/git@075x.png">
                         </a>
                     <li>
-                        <a target="_blank" href="http://linkedin.com/in/dimitar-stefanovski-b77767104">
+                        <a target="_blank" href="http://linkedin.com/in/osooabina">
                             <img border="0" alt="" src="img/social/lin@075x.png">
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/dimebt">
-                            <img border="0" alt="" src="img/social/fb@075x.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="https://www.instagram.com/dimitar.stefanovski/">
-                            <img border="0" alt="" src="img/social/insta@075x.png">
+                        <a target="_blank" href="https://www.behance.net/osooabina">
+                            <img border="0" alt="" src="img/social/behance.png">
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </section>
-    <div class="exph1">
+    <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                    Dark Mode
+                </div>
+    <div class="exph1" id="experience">
         <h1>Experience</h1>
     </div>
     <div class="experience">
@@ -138,8 +144,24 @@
             <div class="skillTitle">
                 EMERGENT TECH SKILLS
             </div>
+<!--
+            <style>
+                .skillDesc{
+                }
+                .skillDesc span{
+                    background-color: #0c1012;
+                    padding: 0 1px;
+                    margin: 1px;
+                    display:inline-block;
+                    text-align: center;
+                    border: 1px solid #3c3a3a;
+                    border-radius: 12px;
+/*                    position: relative;*/
+                }
+            </style>
+-->
             <div class="skillDesc">
-                Augmented Reality, Reinforcement Learning, Machine Learning, Artificial Intelligence, Serverless
+Exploratory Testing, UX Testing, Integration Testing, Regression Testing, Accessibility Testing
             </div>
             <div class="skillTitle">
                 SOFTWARE TESTING
@@ -155,22 +177,85 @@
             </div>
         </div>
     </div>
-</body></html>
+    <div class="exph1" id="education">
+        <h1>Education</h1>
+    </div>
+    <div class="education">
+       <div class="column">
+            <div class="course">
+                <span>KCPE</span>
+            </div>
+            <div class="school">
+                <span>Bware Primary School</span>
+            </div>
+            <div class="date">
+                02/2001 - 11/2009 <span> <img src="img/loc.png" alt="" class="loc"> Bware</span>
+            </div>
+        </div>
+        <div class="column">
+            <div class="course">
+                <span>KCSE</span>
+            </div>
+            <div class="school">
+                <span>Oriwo Boys High School</span>
+            </div>
+            <div class="date">
+                02/2009 - 11/2013 <span><img src="img/loc.png" alt="" class="loc">Kandiege</span>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="course">
+                <span>Bachelor Of Business Information Technology</span>
+            </div>
+            <div class="school">
+                <span>Taita Taveta University</span>
+            </div>
+            <div class="date">
+                02/2009 - 11/2013<span><img src="img/loc.png" alt="" class="loc">Voi</span>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js.js"></script>
+    <script>
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault()
 
+            $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top,
+                },
+                1000,
+                'linear'
+            )
+        })
+        
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
 
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
 
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    else {        document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+    }    
+}
 
+toggleSwitch.addEventListener('change', switchTheme, false);
 
+    </script>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
+</html>

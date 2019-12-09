@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+  
+
+h{
+    color: var(--font-color);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1px 0;
+}
+tr:nth-child(5) {
+            color: #ff00b1;
+/*    display: none;*/
+        }
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+    margin: 20px 0 0 10px;
+}
+.theme-switch {
+  display: inline-block;
+  height: 17px;
+  position: relative;
+  width: 30px;
+    margin-right: 5px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 1px;
+  content: "";
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  transition: .4s;
+  width: 16px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
