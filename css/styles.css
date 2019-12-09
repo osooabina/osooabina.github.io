@@ -70,8 +70,7 @@ a:hover {
     text-decoration: none;
 }
 
-.headerLeft a:hover,
-.headerLeft a:focus {
+.headerLeft a:hover {
     color: #fff;
 }
 
@@ -107,7 +106,7 @@ a:hover {
 .main {
     width: 100vw;
     height: 100vh;
-/*    display: inline-block;*/
+    /*    display: inline-block;*/
     text-align: center;
     background-image: url("../img/desk.png");
     background-position: center;
@@ -313,14 +312,38 @@ h1 span {
         background-size: cover;
     }
 
+/*
     .header-left {
-        display: inline;
-        text-align: left;
+        display: contents;
+        text-align: center;
         padding: 2px;
+    }
+*/
+
+    .header-left {
+/*        position: relative;*/
+/*        display: inline-block;*/
+        text-align: center;
+        padding: 3px 0;
+        width: 100%;
+
+    }
+
+    .header-left ul {
+        text-align: center;
+    }
+
+    .header-left li {
+/*        display: inline-block;*/
+        font-size: 1rem;
+/*        word-spacing: 12px;*/
+        letter-spacing: 1px;
+/*        padding-right: 15px;*/
+/*        color: wheat;*/
     }
 
     .name {
-        font-size: 2rem;
+        font-size: 1.2rem;
         letter-spacing: 5px;
         transition: 2s;
     }
