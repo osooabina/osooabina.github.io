@@ -5,11 +5,13 @@ h{
     color: var(--font-color);
 }
 
+/*
 nav {
   display: flex;
   justify-content: flex-end;
   padding: 1px 0;
 }
+*/
 tr:nth-child(5) {
             color: #ff00b1;
 /*    display: none;*/
